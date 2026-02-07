@@ -15,6 +15,6 @@ class StateManager:
         return int(guessed_state_row.x.item()), int(guessed_state_row.y.item())
 
     def save_missing_states(self):
-        missing_states = list(set(self.all_states) - set(self.guessed_states))
+        missing_states = [state for state in self.all_states if state not in self.guessed_states]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("missing_states.csv")
