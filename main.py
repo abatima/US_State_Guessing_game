@@ -6,6 +6,7 @@ screen = turtle.Screen()
 screen.title("US States Game")
 background_image = "src/blank_states_img.gif"
 screen.addshape(background_image)
+screen.setup(width=725, height=491)
 turtle.shape(background_image)
 
 
